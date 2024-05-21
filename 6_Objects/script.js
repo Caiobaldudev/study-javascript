@@ -2,11 +2,11 @@
 // Conjunto de variáveis e funções, que são chamadas de propriedades e métodos.
 
 var pessoa = {
-  nome: 'André',
+  nome: "André",
   idade: 28,
-  profissao: 'Designer',
+  profissao: "Designer",
   possuiFaculdade: true,
-}
+};
 
 pessoa.nome; // 'André'
 pessoa.possuiFaculdade; // true
@@ -17,18 +17,18 @@ pessoa.possuiFaculdade; // true
 
 var quadrado = {
   lados: 4,
-  area: function(lado) {
+  area: function (lado) {
     return lado * lado;
   },
-  perimetro: function(lado) {
+  perimetro: function (lado) {
     return this.lados * lado;
   },
-}
+};
 
 quadrado.lados; // 4
 quadrado.area(5); // 25
 quadrado.perimetro(5); // 20
-MÉTODOS
+MÉTODOS;
 // Abreviação de area: function() {} para area() {}, no ES6+
 
 var quadrado = {
@@ -39,7 +39,7 @@ var quadrado = {
   perimetro(lado) {
     return this.lados * lado;
   },
-}
+};
 // ORGANIZAR O CÓDIGO
 // Objetos servem para organizar o código em pequenas partes reutilizáveis.
 
@@ -63,8 +63,8 @@ console.log(typeof carro); // 'object'
 var menu = {
   width: 800,
   height: 50,
-  backgroundColor: '#84E',
-}
+  backgroundColor: "#84E",
+};
 
 var bg = menu.backgroundColor; // '#84E'
 // DOT NOTATION SET
@@ -73,20 +73,20 @@ var bg = menu.backgroundColor; // '#84E'
 var menu = {
   width: 800,
   height: 50,
-  backgroundColor: '#84E',
-}
+  backgroundColor: "#84E",
+};
 
-menu.backgroundColor = '#000';
+menu.backgroundColor = "#000";
 console.log(menu.backgroundColor); // '#000'
 // ADICIONAR PROPRIEDADES E MÉTODOS
 // Basta adicionar um novo nome e definir o valor.
 
 var menu = {
   width: 800,
-}
+};
 
 menu.height = 50;
-menu.position = 'fixed';
+menu.position = "fixed";
 // PALAVRA-CHAVE THIS
 // this irá fazer uma referência ao próprio objeto.
 
@@ -96,8 +96,8 @@ var menu = {
   height: 50,
   metadeHeight() {
     return this.height / 2;
-  }
-}
+  },
+};
 
 menu.metadeHeight(); // 25
 // sem o this, seria 60
@@ -108,37 +108,35 @@ menu.metadeHeight(); // 25
 
 var menu = {
   width: 800,
-}
+};
 
-menu.hasOwnProperty('width') // true
-menu.hasOwnProperty('height') // false
+menu.hasOwnProperty("width"); // true
+menu.hasOwnProperty("height"); // false
 // hasOwnProperty é um método de Object
-
-
 
 // EXERCÍCIO
 // Crie um objeto com os seus dados pessoais
 // Deve possui pelo menos duas propriedades nome e sobrenome
 var myPerson = {
-  name: 'Caio',
-  surname: 'Balduino',
-}
+  name: "Caio",
+  surname: "Balduino",
+};
 
 // Crie um método no objeto anterior, que mostre o seu nome completo
 var myPersonMethod = {
-  personName: 'Caio',
-  surname: 'Balduino',
-  fullName(){
-    return `this.${personName} this.${surname}`
-  }
-}
+  personName: "Caio",
+  surname: "Balduino",
+  fullName() {
+    return `this.${personName} this.${surname}`;
+  },
+};
 
 // Modifique o valor da propriedade preco para 3000
 var carro = {
   preco: 1000,
   portas: 4,
-  marca: 'Audi',
-}
+  marca: "Audi",
+};
 
 carro.preco = 3000;
 
@@ -146,10 +144,16 @@ carro.preco = 3000;
 // preto com 10 anos, que late ao ver um homem
 
 var cachorro = {
-  raca: 'Labrador',
-  cor: 'Preto',
+  raca: "Labrador",
+  cor: "Preto",
   idade: 10,
-  latir(){
-    return 'Au au'
-  }
-}
+  latir(pessoa) {
+    if (pessoa === "homem") {
+      return "au au";
+    } else {
+      return "nada";
+    }
+  },
+};
+
+cachorro.latir("homem"); // 'au au'
