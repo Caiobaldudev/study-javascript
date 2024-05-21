@@ -127,10 +127,11 @@ false || true; // true
 // Verifique se a sua idade é maior do que a de algum parente
 // Dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
 var myAge = 23
+var idadeParente = 22
 
-if(myAge > 18) {
+if(myAge > idadeParente) {
   console.log('É maior');
-} else if(myAge < 18) {
+} else if(myAge < idadeParente) {
   console.log('É menor');
 } else {
   console.log('É igual');
