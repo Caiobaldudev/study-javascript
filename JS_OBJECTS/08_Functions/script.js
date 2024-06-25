@@ -92,7 +92,7 @@ frutas.pop(); // Mesma coisa que a função acima
 // ARRAY-LIKE
 // HTMLCollection, NodeList e demais objetos do Dom, são parecidos com uma array. Por isso conseguimos utilizar os mesmos na substituição do this em call.
 
-const li = document.querySelectorAll("li");
+// const li = document.querySelectorAll("li");
 
 const filtro = Array.prototype.filter.call(li, function (item) {
   return item.classList.contains("ativo");
@@ -114,7 +114,7 @@ Math.max.call(null, 3, 4, 5, 6, 7, 20);
 // APPLY VS CALL
 // A única diferença é a array como segundo argumento.
 
-const li = document.querySelectorAll("li");
+// const li = document.querySelectorAll("li");
 
 function itemPossuiAtivo(item) {
   return item.classList.contains("ativo");
